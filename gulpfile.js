@@ -6,7 +6,6 @@ const {
 } = require('gulp');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
-const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('cssnano');
 const terser = require('gulp-terser');
 const browsersync = require('browser-sync').create();
@@ -17,9 +16,6 @@ function scssTask() {
             sourcemaps: true
         })
         .pipe(sass())
-        .pipe(autoprefixer({
-			cascade: false
-		}))
         .pipe(postcss([cssnano()]))
         .pipe(dest('dist', {
             sourcemaps: '.'

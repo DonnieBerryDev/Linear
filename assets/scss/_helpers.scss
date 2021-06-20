@@ -1,9 +1,30 @@
-$section-spacing: rem(100);
+.left-padding {
+    padding-left: rem(40);
+}
 
-@media only screen and (max-width: 450px) {
-    $section-spacing: rem(50);
+.padding-80 {
+    padding-top: rem(80);
+}
+
+.opacityOn {
+    opacity: 1;
+    transition: 1.5s all ease-in-out;
+}
+
+.fade-companyboxes,
+.fade-newsboxes {
+    opacity: 1;
+    transition: 0.5s all ease-in-out;
 }
 
 .hidden {
     opacity: 0;
+}
+
+.hideInOrder {
+    opacity: 0;
+}
+
+.overflowYdisable {
+    overflow-y: hidden !important;
 }
